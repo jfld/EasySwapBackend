@@ -1,0 +1,60 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: easyswap-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: easyswap
+      MYSQL_USER: easyuser
+      MYSQL_PASSWORD: easypasswd
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - easyswap-network
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    container_name: easyswap-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - easyswap-network
+    restart: unless-stopped
+    command: redis-server --appendonly yes
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: easyswap-backend
+    depends_on:
+      - mysql
+      - redis
+    ports:
+      - "8080:8080"
+    environment:
+      - DB_HOST=mysql
+      - DB_PORT=3306
+      - DB_USER=easyuser
+      - DB_PASSWORD=easypasswd
+      - DB_DATABASE=easyswap
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+    networks:
+      - easyswap-network
+    restart: unless-stopped
+
+volumes:
+  mysql_data:
+  redis_data:
+
+networks:
+  easyswap-network:
+    driver: bridge
