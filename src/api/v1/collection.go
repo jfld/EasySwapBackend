@@ -8,7 +8,7 @@ import (
 	"go.uber.org/zap"
 
 	"github.com/joinmouse/EasySwapBase/errcode"
-	"github.com/joinmouse/EasySwapBasegger/xzap"
+	"github.com/joinmouse/EasySwapBase/logger/xzap"
 
 	"github.com/joinmouse/EasySwapBackend/src/service/svc"
 	"github.com/joinmouse/EasySwapBackend/src/service/v1"

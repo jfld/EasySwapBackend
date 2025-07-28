@@ -14,7 +14,7 @@ import (
 
 	"github.com/google/uuid"
 	"github.com/joinmouse/EasySwapBase/errcode"
-	"github.com/joinmouse/EasySwapBaseores/gdb/orderbookmodel/base"
+	"github.com/joinmouse/EasySwapBase/stores/gdb/orderbookmodel/base"
 	"github.com/pkg/errors"
 
 	"github.com/joinmouse/EasySwapBackend/src/api/middleware"

@@ -4,7 +4,7 @@ import (
 	"context"
 
 	"github.com/joinmouse/EasySwapBase/stores/gdb/orderbookmodel/base"
-	"github.com/joinmouse/EasySwapBaseores/gdb/orderbookmodel/multi"
+	"github.com/joinmouse/EasySwapBase/stores/gdb/orderbookmodel/multi"
 	"github.com/pkg/errors"
 )
 

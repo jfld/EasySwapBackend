@@ -11,8 +11,8 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/joinmouse/EasySwapBase/errcode"
+	"github.com/joinmouse/EasySwapBase/logger/xzap"
 	"github.com/joinmouse/EasySwapBase/xhttp"
-	"github.com/joinmouse/EasySwapBasegger/xzap"
 )
 
 var (

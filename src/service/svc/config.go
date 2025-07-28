@@ -3,7 +3,7 @@ package svc
 import (
 	"github.com/joinmouse/EasySwapBase/evm/erc"
 	//"github.com/joinmouse/EasySwapBaseage"
-	"github.com/joinmouse/EasySwapBaseores/xkv"
+	"github.com/joinmouse/EasySwapBase/stores/xkv"
 	"gorm.io/gorm"
 
 	"github.com/joinmouse/EasySwapBackend/src/dao"

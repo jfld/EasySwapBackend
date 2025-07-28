@@ -4,9 +4,9 @@ import (
 	"context"
 
 	"github.com/joinmouse/EasySwapBase/chain/nftchainservice"
-	"github.com/joinmouse/EasySwapBasegger/xzap"
-	"github.com/joinmouse/EasySwapBaseores/gdb"
-	"github.com/joinmouse/EasySwapBaseores/xkv"
+	"github.com/joinmouse/EasySwapBase/logger/xzap"
+	"github.com/joinmouse/EasySwapBase/stores/gdb"
+	"github.com/joinmouse/EasySwapBase/stores/xkv"
 	"github.com/pkg/errors"
 	"github.com/zeromicro/go-zero/core/stores/cache"
 	"github.com/zeromicro/go-zero/core/stores/kv"

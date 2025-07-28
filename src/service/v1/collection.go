@@ -7,9 +7,9 @@ import (
 	"sync"
 
 	"github.com/joinmouse/EasySwapBase/errcode"
-	"github.com/joinmouse/EasySwapBasegger/xzap"
-	"github.com/joinmouse/EasySwapBasem/eip"
-	"github.com/joinmouse/EasySwapBaseores/gdb/orderbookmodel/multi"
+	"github.com/joinmouse/EasySwapBase/evm/eip"
+	"github.com/joinmouse/EasySwapBase/logger/xzap"
+	"github.com/joinmouse/EasySwapBase/stores/gdb/orderbookmodel/multi"
 	"github.com/pkg/errors"
 	"github.com/shopspring/decimal"
 	"go.uber.org/zap"

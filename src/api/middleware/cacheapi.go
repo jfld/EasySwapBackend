@@ -13,7 +13,7 @@ import (
 	"github.com/gin-gonic/gin"
 
 	"github.com/joinmouse/EasySwapBase/errcode"
-	"github.com/joinmouse/EasySwapBaseores/xkv"
+	"github.com/joinmouse/EasySwapBase/stores/xkv"
 )
 
 const CacheApiPrefix = "apicache:"

@@ -7,7 +7,7 @@ import (
 	"strings"
 
 	"github.com/joinmouse/EasySwapBase/logger/xzap"
-	"github.com/joinmouse/EasySwapBaseores/xkv"
+	"github.com/joinmouse/EasySwapBase/stores/xkv"
 	"github.com/pkg/errors"
 	"go.uber.org/zap"
 

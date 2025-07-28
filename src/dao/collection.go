@@ -7,7 +7,7 @@ import (
 	"time"
 
 	"github.com/joinmouse/EasySwapBase/ordermanager"
-	"github.com/joinmouse/EasySwapBaseores/gdb/orderbookmodel/multi"
+	"github.com/joinmouse/EasySwapBase/stores/gdb/orderbookmodel/multi"
 	"github.com/pkg/errors"
 	"github.com/shopspring/decimal"
 

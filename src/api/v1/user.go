@@ -3,7 +3,7 @@ package v1
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/joinmouse/EasySwapBase/errcode"
-	"github.com/joinmouse/EasySwapBaset/validator"
+	"github.com/joinmouse/EasySwapBase/kit/validator"
 
 	"github.com/joinmouse/EasySwapBackend/src/service/svc"
 	"github.com/joinmouse/EasySwapBackend/src/service/v1"

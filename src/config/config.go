@@ -5,8 +5,8 @@ import (
 
 	"github.com/joinmouse/EasySwapBase/evm/erc"
 	//"github.com/joinmouse/EasySwapBaseage"
-	logging "github.com/joinmouse/EasySwapBasegger"
-	"github.com/joinmouse/EasySwapBaseores/gdb"
+	logging "github.com/joinmouse/EasySwapBase/logger"
+	"github.com/joinmouse/EasySwapBase/stores/gdb"
 	"github.com/spf13/viper"
 )
 

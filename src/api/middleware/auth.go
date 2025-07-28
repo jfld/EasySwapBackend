@@ -12,7 +12,7 @@ import (
 	"github.com/pkg/errors"
 
 	"github.com/joinmouse/EasySwapBase/errcode"
-	"github.com/joinmouse/EasySwapBaseores/xkv"
+	"github.com/joinmouse/EasySwapBase/stores/xkv"
 )
 
 const CR_LOGIN_MSG_KEY string = "cache:es:login:msg"
