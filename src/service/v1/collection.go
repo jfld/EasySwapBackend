@@ -9,6 +9,7 @@ import (
 	"github.com/joinmouse/EasySwapBase/errcode"
 	"github.com/joinmouse/EasySwapBase/evm/eip"
 	"github.com/joinmouse/EasySwapBase/logger/xzap"
+	"github.com/joinmouse/EasySwapBase/ordermanager"
 	"github.com/joinmouse/EasySwapBase/stores/gdb/orderbookmodel/multi"
 	"github.com/pkg/errors"
 	"github.com/shopspring/decimal"

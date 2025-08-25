@@ -4,13 +4,13 @@
 package main
 
 import (
-	"flag"               // 用于解析命令行参数
-	_ "net/http/pprof"   // 导入pprof包，用于性能分析和调试
+	"flag"             // 用于解析命令行参数
+	_ "net/http/pprof" // 导入pprof包，用于性能分析和调试
 
-	"github.com/joinmouse/EasySwapBackend/src/api/router"   // 导入路由模块
-	"github.com/joinmouse/EasySwapBackend/src/app"          // 导入应用程序核心模块
-	"github.com/joinmouse/EasySwapBackend/src/config"       // 导入配置管理模块
-	"github.com/joinmouse/EasySwapBackend/src/service/svc"  // 导入服务上下文模块
+	"github.com/joinmouse/EasySwapBackend/src/api/router"  // 导入路由模块
+	"github.com/joinmouse/EasySwapBackend/src/app"         // 导入应用程序核心模块
+	"github.com/joinmouse/EasySwapBackend/src/config"      // 导入配置管理模块
+	"github.com/joinmouse/EasySwapBackend/src/service/svc" // 导入服务上下文模块
 )
 
 // 常量定义
@@ -18,7 +18,7 @@ const (
 	// repoRoot 仓库根目录，当前为空字符串表示使用当前目录
 	repoRoot = ""
 	// defaultConfigPath 默认配置文件路径，指向config目录下的config.toml文件
-	defaultConfigPath = "./config/config.toml"
+	defaultConfigPath = "../config/config.toml"
 )
 
 // main 是程序的主入口函数
@@ -28,7 +28,7 @@ func main() {
 	// -conf 参数用于指定配置文件路径，默认使用 defaultConfigPath
 	conf := flag.String("conf", defaultConfigPath, "配置文件路径")
 	flag.Parse()
-	
+
 	// 从指定的配置文件中解析配置信息
 	// 配置文件包含数据库连接、API端口、支持的区块链网络等信息
 	c, err := config.UnmarshalConfig(*conf)
@@ -50,18 +50,18 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	
+
 	// 初始化路由器，设置所有的API端点
 	// 路由器配置了中间件、CORS策略和API版本路由
 	r := router.NewRouter(serverCtx)
-	
+
 	// 创建应用程序平台实例
 	// 平台封装了配置、路由器和服务上下文
 	app, err := app.NewPlatform(c, r, serverCtx)
 	if err != nil {
 		panic(err)
 	}
-	
+
 	// 启动应用程序服务器
 	// 开始监听HTTP请求并处理NFT交易相关的API调用
 	app.Start()

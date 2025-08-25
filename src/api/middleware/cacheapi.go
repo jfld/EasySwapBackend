@@ -14,6 +14,7 @@ import (
 
 	"github.com/joinmouse/EasySwapBase/errcode"
 	"github.com/joinmouse/EasySwapBase/stores/xkv"
+	"github.com/joinmouse/EasySwapBase/xhttp"
 )
 
 const CacheApiPrefix = "apicache:"
